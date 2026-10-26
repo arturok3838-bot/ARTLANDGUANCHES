@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101326">
+<title>ART Languages — изучай языки</title>
+<style>
+:root{--bg:#0b0d18;--panel:#171b2e;--line:#303653;--txt:#f7f7ff;--muted:#aab0c9;--pink:#ff75b7;--blue:#9794ff;--mint:#76f0c2}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 80% 0,#33234c,transparent 40%),var(--bg);color:var(--txt);font-family:system-ui,Arial,sans-serif}
+.wrap{width:min(1080px,92%);margin:auto}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.brand{font-weight:900;letter-spacing:.5px}
+.logo{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--blue));margin-right:8px}
+.muted{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:55px 0}
+.eyebrow{color:var(--mint);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.03;letter-spacing:-2px;margin:16px 0}
+.grad{background:linear-gradient(90deg,var(--pink),var(--blue),var(--mint));color:transparent;background-clip:text}
+.hero p{line-height:1.7;font-size:17px;color:var(--muted)}
+.btn{border:0;border-radius:13px;padding:14px 18px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer}
+.primary{background:linear-gradient(100deg,var(--pink),var(--blue));color:#151326}
+.secondary{border:1px solid var(--line);color:var(--txt);background:#ffffff08}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.mock,.feature,.lang,.download{background:linear-gradient(145deg,#1b2037,#131626);border:1px solid var(--line);border-radius:22px;padding:22px}
+.mock{box-shadow:0 25px 80px #0005}
+.bar{height:8px;background:#353c5d;border-radius:8px;margin:12px 0 22px}
+.bar i{display:block;width:68%;height:100%;background:linear-gradient(90deg,var(--pink),var(--blue));border-radius:8px}
+.word{font-size:34px;font-weight:900;margin-top:22px;cursor:pointer}
+.choice{padding:12px;border:1px solid var(--line);border-radius:12px;margin-top:9px}
+.choice:first-child{border-color:var(--mint)}
+section{padding:35px 0 55px}
+h2{font-size:clamp(28px,4vw,40px);margin:0 0 9px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:22px}
+.feature h3{margin:12px 0 7px}
+.feature p{color:var(--muted);line-height:1.6;margin:0}
+.tools{display:flex;gap:10px;margin:18px 0}
+.search,.filter{padding:13px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--txt);font:inherit}
+.search{flex:1;min-width:0}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.lang{display:flex;align-items:center;gap:10px;text-align:left;color:var(--txt);cursor:pointer;padding:14px;min-height:75px}
+.flag{font-size:25px}
+.lang strong{display:block;font-size:13px}
+.lang small{color:var(--muted)}
+.download{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(110deg,#282040,#172c3a)}
+.download p{color:var(--muted);line-height:1.6;max-width:640px}
+.status{color:var(--mint);min-height:22px;margin-top:12px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px;line-height:1.6}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:28px}.features{grid-template-columns:1fr}.grid{grid-template-columns:repeat(3,1fr)}.download{display:block}.nav .muted{font-size:12px}}
+@media(max-width:460px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding-bottom:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav">
+<div class="brand"><span class="logo">A</span>ART <span class="grad">LANGUAGES</span></div>
+<span class="muted">30 языков · одна платформа</span>
+</header>
+
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">Твой следующий язык начинается здесь</div>
+<h1>Меньше зубрёжки.<br><span class="grad">Больше общения.</span></h1>
+<p>Учи слова в удобном темпе, слушай произношение, тренируй память с карточками и отмечай свой прогресс. Выбирай один из 30 языков.</p>
+<div class="actions">
+<a class="btn primary" href="#download">↓ Открыть приложение</a>
+<a class="btn secondary" href="#languages">Выбрать язык →</a>
+</div>
+<small class="muted">Это первая веб-версия. APK-файл появится после отдельной сборки Android-приложения.</small>
+</div>
+
+<div class="mock">
+<div class="muted">ТВОЙ ПРОГРЕСС</div>
+<h3>Сегодняшняя цель: 12 из 20 слов</h3>
+<div class="bar"><i></i></div>
+<div class="muted">АНГЛИЙСКИЙ · СЛОВО ДНЯ</div>
+<div class="word" id="speak">Curiosity 🔊</div>
+<div class="muted">любознательность · нажми, чтобы услышать</div>
+<div class="choice">✓ Желание узнавать новое</div>
+<div class="choice">Уверенность</div>
+<div class="choice">Путешествие</div>
+</div>
+</section>
+
+<section>
+<h2>Твой набор инструментов</h2>
+<div class="muted">Всё нужное для регулярной практики — в одном месте.</div>
+<div class="features">
+<article class="feature">
+<div style="font-size:27px">🗂️</div>
+<h3>Словарные карточки</h3>
+<p>Повторяй слова, проверяй себя и возвращайся к сложным карточкам.</p>
+</article>
+<article class="feature">
+<div style="font-size:27px">🔊</div>
+<h3>Произношение</h3>
+<p>Прослушивай пример произношения через синтез речи браузера, если голос доступен.</p>
+</article>
+<article class="feature">
+<div style="font-size:27px">📈</div>
+<h3>Твой прогресс</h3>
+<p>Выбирай язык и формируй привычку заниматься понемногу каждый день.</p>
+</article>
+</div>
+</section>
+
+<section id="languages">
+<h2>Выбери язык</h2>
+<div class="muted">Ищи по названию или фильтруй список.</div>
+<div class="tools">
+<input class="search" id="q" placeholder="🔎 Поиск языка" aria-label="Поиск языка">
+<select class="filter" id="filter" aria-label="Фильтр">
+<option value="all">Все языки</option>
+<option value="popular">Популярные</option>
+<option value="europe">Европа</option>
+<option value="asia">Азия</option>
+</select>
+</div>
+<div class="grid" id="grid"></div>
+<div class="status" id="status" aria-live="polite"></div>
+</section>
+
+<section id="download">
+<div class="download">
+<div>
+<h2>Начни с одного слова</h2>
+<p>Открой сайт на телефоне. В Chrome нажми ⋮ → «Добавить на главный экран», чтобы создать ярлык. Отдельный APK пока не готов, поэтому мы не показываем фальшивую кнопку скачивания.</p>
+</div>
+<button class="btn primary" id="install">Как добавить на телефон</button>
+</div>
+<div class="status" id="help" aria-live="polite"></div>
+</section>
+</main>
+
+<footer>
+© 2026 ART Languages. Словари и аудиозаписи необходимо подключать из открытых источников с соблюдением их лицензий. В этой стартовой версии озвучивание использует встроенный синтез речи браузера; полноценные словарные базы и офлайн-аудио ещё не подключены.
+</footer>
+</div>
+
+<script>
+const L=[
+["🇷🇺","Русский","Russian","europe",1],
+["🇬🇧","Английский","English","europe",1],
+["🇨🇳","Китайский","Chinese","asia",1],
+["🇪🇸","Испанский","Spanish","europe",1],
+["🇫🇷","Французский","French","europe",1],
+["🇩🇪","Немецкий","German","europe",1],
+["🇮🇹","Итальянский","Italian","europe",1],
+["🇵🇹","Португальский","Portuguese","europe",1],
+["🇯🇵","Японский","Japanese","asia",1],
+["🇰🇷","Корейский","Korean","asia",1],
+["🇳🇱","Нидерландский","Dutch","europe",0],
+["🇵🇱","Польский","Polish","europe",0],
+["🇺🇦","Украинский","Ukrainian","europe",0],
+["🇹🇷","Турецкий","Turkish","asia",0],
+["🇸🇦","Арабский","Arabic","asia",0],
+["🇮🇳","Хинди","Hindi","asia",0],
+["🇸🇪","Шведский","Swedish","europe",0],
+["🇳🇴","Норвежский","Norwegian","europe",0],
+["🇩🇰","Датский","Danish","europe",0],
+["🇫🇮","Финский","Finnish","europe",0],
+["🇬🇷","Греческий","Greek","europe",0],
+["🇨🇿","Чешский","Czech","europe",0],
+["🇸🇰","Словацкий","Slovak","europe",0],
+["🇭🇺","Венгерский","Hungarian","europe",0],
+["🇷🇴","Румынский","Romanian","europe",0],
+["🇮🇩","Индонезийский","Indonesian","asia",0],
+["🇻🇳","Вьетнамский","Vietnamese","asia",0],
+["🇹🇭","Тайский","Thai","asia",0],
+["🇮🇱","Иврит","Hebrew","asia",0],
+["🇧🇷","Бразильский португальский","Brazilian Portuguese","europe",0]
+];
+
+const grid=document.querySelector("#grid");
+const q=document.querySelector("#q");
+const f=document.querySelector("#filter");
+const status=document.querySelector("#status");
+
+function render(){
+grid.innerHTML="";
+let n=0;
+L.forEach(l=>{
+if(!(l[1]+" "+l[2]).toLowerCase().includes(q.value.toLowerCase())||
+(f.value==="popular"&&!l[4])||
+(f.value!=="all"&&f.value!=="popular"&&l[3]!==f.value))return;
+n++;
+let b=document.createElement("button");
+b.className="lang";
+b.innerHTML=`<span class="flag">${l[0]}</span><span><strong>${l[1]}</strong><small>${l[2]}</small></span>`;
+b.onclick=()=>{
+localStorage.setItem("art-language",l[1]);
+status.textContent="Выбран язык: "+l[1]+". Словарь и уроки для него подключаются следующим этапом.";
+};
+grid.appendChild(b);
+});
+if(!n)status.textContent="Ничего не найдено.";
+}
+q.oninput=render;
+f.onchange=render;
+render();
+
+document.querySelector("#install").onclick=()=>{
+document.querySelector("#help").textContent="В Chrome на Android: нажми ⋮ вверху справа → «Добавить на главный экран». Установка как приложения зависит от настроек браузера.";
+};
+
+document.querySelector("#speak").onclick=()=>{
+if(!("speechSynthesis" in window)){
+alert("Синтез речи недоступен в этом браузере.");
+return;
+}
+let u=new SpeechSynthesisUtterance("Curiosity");
+u.lang="en-US";
+speechSynthesis.speak(u);
+};
+</script>
+</body>
+</html>
